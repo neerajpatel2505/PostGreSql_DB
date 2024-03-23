@@ -4,7 +4,7 @@ from .models import DataStore
 
 # Create your views here.
 def home(request):
-    return render(request,'app/home.html')
+    return render(request,'home.html')
 
 
 def regeister(request):
@@ -28,7 +28,7 @@ def regeister(request):
             Qualification=quali,
             DOB=dob,
             Language_Known=language)
-        return render(request,'app/register.html')
+        return render(request,'register.html')
         # data={
         #     'fname':firstName,
         #     'lname':lastName,
@@ -46,7 +46,7 @@ def data(request):
     # print(all_stu)
     students = all_stu.values()
     # print(students)
-    return render(request,'app/all_data.html',{'data':students})
+    return render(request,'all_data.html',{'data':students})
 
 def login(request):
     if request.method=='POST':
